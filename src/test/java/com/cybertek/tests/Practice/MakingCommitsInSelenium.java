@@ -9,5 +9,6 @@ public class MakingCommitsInSelenium {
         //work1
         //work2
         //work3 done after resetting
+        //include everything and push to github.com
     }
 }
