@@ -7,5 +7,6 @@ public class MakingCommitsInSelenium {
         System.out.println("add more work");
         System.out.println("listening to github class and taking notes");
         //work1
+        //work2
     }
 }
