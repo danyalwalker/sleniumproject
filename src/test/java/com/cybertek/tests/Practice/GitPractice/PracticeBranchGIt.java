@@ -1,4 +1,4 @@
-package com.cybertek.tests.Practice;
+package com.cybertek.tests.Practice.GitPractice;
 
 public class PracticeBranchGIt {
     //automation work 1

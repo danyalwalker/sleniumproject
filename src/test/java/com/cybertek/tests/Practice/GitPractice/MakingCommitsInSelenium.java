@@ -1,4 +1,4 @@
-package com.cybertek.tests.Practice;
+package com.cybertek.tests.Practice.GitPractice;
 
 public class MakingCommitsInSelenium {
     public static void main(String[] args) {
