@@ -1,4 +1,4 @@
-package com.cybertek.tests.day9_properties_brower_utils;
+package com.cybertek.Utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;

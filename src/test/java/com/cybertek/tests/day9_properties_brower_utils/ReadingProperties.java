@@ -1,5 +1,6 @@
 package com.cybertek.tests.day9_properties_brower_utils;
 
+import com.cybertek.Utilities.ConfigurationReader;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;

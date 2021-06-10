@@ -1,5 +1,6 @@
 package com.cybertek.tests.day6_testing_intro_dropdowns;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNG_Intro {
@@ -22,23 +23,23 @@ public class TestNG_Intro {
     }
 
 
-    @Test (priority = 1)
+    @Test (priority = 2)
     public void test1(){
-        //System.out.println("Running test 1..");
+        System.out.println("Running test 1..");
         String actual = "apple";
         String expected = "apple";
 
-       // Assert.assertEquals(actual,expected);
+        Assert.assertEquals(actual,expected);
 
     }
 
-    @Test (priority = 2)
+    @Test (priority = 1)
     public void test2(){
-        //System.out.println("Running test 2..");
+        System.out.println("Running test 2..");
 
         String actual = "apple";
         String expected = "apple";
-       // Assert.assertTrue(actual.equals(expected));
+        Assert.assertTrue(actual.equals(expected));
        // Assert.assertFalse();
     }
 }
