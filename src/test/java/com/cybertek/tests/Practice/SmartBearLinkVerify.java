@@ -28,6 +28,7 @@ public class SmartBearLinkVerify {
         passWord.sendKeys("test");
         WebElement login = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_login_button']"));
         login.click();
+//        SmartBearUtils.loginToSmartBear(WebDriverFactory.getDriver("chrome"));
         List<WebElement> links = driver.findElements(By.xpath("//body//a"));
         System.out.println(links.size());
         for (WebElement link : links) {

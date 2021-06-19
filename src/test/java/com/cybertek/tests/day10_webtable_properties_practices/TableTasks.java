@@ -2,35 +2,18 @@ package com.cybertek.tests.day10_webtable_properties_practices;
 
 import com.cybertek.Utilities.ConfigurationReader;
 import com.cybertek.Utilities.TableUtils;
-import com.cybertek.Utilities.WebDriverFactory;
+import com.cybertek.tests.base.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class TableTasks {
-    WebDriver driver;
-
-    @BeforeMethod
-    public void setupMethod(){
-
-        String browser = ConfigurationReader.getProperty("browser");
-
-        String Url = ConfigurationReader.getProperty("dataTablesUrl");
-
-        driver = WebDriverFactory.getDriver(browser);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.get(Url);
-
-    }
+public class TableTasks extends TestBase {
 
     @Test
     public void task3_return_tims_due_amount(){
+        String Url = ConfigurationReader.getProperty("dataTablesUrl");
+        driver.get(Url);
         //1.	Open browser and go to: http://practice.cybertekschool.com/tables#edit
         //2.	Locate first table and verify Tim has due amount of “$50”
         //
@@ -51,6 +34,15 @@ public class TableTasks {
 
     @Test
     public void task4_verify_order_method(){
+        String Url = ConfigurationReader.getProperty("dataTablesUrl");
+        driver.get(Url);
         TableUtils.verifyOrder(driver, "Tim");
+    }
+
+    @Test
+    public void task5_print_all_names_and_emails(){
+        String Url = ConfigurationReader.getProperty("dataTablesUrl");
+        driver.get(Url);
+
     }
 }
