@@ -36,15 +36,15 @@ public class P1_Library_Login {
         LibraryUtils.loginToLibrary(driver);
 
         //3. Enter username: “”
-        WebElement inputUsername = driver.findElement(By.xpath("//input[@id='inputEmail']"));
-        inputUsername.sendKeys("student11@library");
-
-        //4. Enter password: “”
-        WebElement inputPassword = driver.findElement(By.xpath("//input[@id='inputPassword']"));
-        inputPassword.sendKeys("tScBPCUr");
-        //5. Click to Login button
-        WebElement loginButton = driver.findElement(By.xpath("//button[text()='Sign in']"));
-        loginButton.click();
+//        WebElement inputUsername = driver.findElement(By.xpath("//input[@id='inputEmail']"));
+//        inputUsername.sendKeys("student11@library");
+//
+//        //4. Enter password: “”
+//        WebElement inputPassword = driver.findElement(By.xpath("//input[@id='inputPassword']"));
+//        inputPassword.sendKeys("tScBPCUr");
+//        //5. Click to Login button
+//        WebElement loginButton = driver.findElement(By.xpath("//button[text()='Sign in']"));
+//        loginButton.click();
         //6. Print out count of all the links on landing page
         BrowserUtils.sleep(2);
         List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
