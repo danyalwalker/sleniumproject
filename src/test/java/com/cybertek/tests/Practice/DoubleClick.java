@@ -19,6 +19,10 @@ public class DoubleClick {
 
         WebElement redElement = Driver.getDriver().findElement(By.xpath("//p[@style='color: red;']"));
         Assert.assertTrue(redElement.isDisplayed());
-        Assert.assertTrue(redElement.getAttribute("style").contains("red"));
+//        Assert.assertTrue(redElement.getAttribute("style").contains("red"));
+        String expectedInStyle = "red";
+        String actual = redElement.getAttribute("style");
+
+        Assert.assertTrue(actual.contains(expectedInStyle));
     }
 }
