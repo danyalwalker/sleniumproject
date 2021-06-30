@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RefreshButtonLocation {
+public class LocateRefreshButton {
     //Refresh button should be on the left side of Reset Button
     @BeforeClass
     public void loginVytrack() {
@@ -41,9 +41,13 @@ public class RefreshButtonLocation {
     public void locateRefreshButton2(){
 
             WebElement refreshButton = Driver.getDriver().findElement(By.xpath("//a[@title='Refresh']/..//a[2]"));
+            int refreshButtonLocation = refreshButton.getLocation().getX();
+            System.out.println("refreshButtonLocation = " + refreshButtonLocation);
             String actualRefreshButtonTitle = refreshButton.getAttribute("title");
 
-             WebElement resetButton = Driver.getDriver().findElement(By.xpath("//a[@title='Refresh']/..//a[3]"));
+            WebElement resetButton = Driver.getDriver().findElement(By.xpath("//a[@title='Refresh']/..//a[3]"));
+            int resetButtonLocation = resetButton.getLocation().getX();
+            System.out.println("resetButtonLocation = " + resetButtonLocation);
             String actualResetButtonTitle = resetButton.getAttribute("title");
 
             String expectedRefreshButtonTitle = "Refresh";
@@ -51,6 +55,7 @@ public class RefreshButtonLocation {
 
             Assert.assertTrue(actualRefreshButtonTitle.equals(expectedRefreshButtonTitle));
             Assert.assertTrue(actualResetButtonTitle.equals(expectedResetButtonTitle));
+            Assert.assertTrue(resetButtonLocation>refreshButtonLocation);
 
         }
     }
